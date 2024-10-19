@@ -1,10 +1,10 @@
-# CSS Layouts
+# 🎨 CSS Layouts
 
 This repository contains two assignments from my CSS class at New England Institute of Technology, focusing on modern layout techniques: **CSS Grid** and **CSS Flexbox**.
 
 ---
 
-## Screenshots
+## 📸 Screenshots
 
 ### CSS Grid Layout
 
@@ -12,6 +12,6 @@ This repository contains two assignments from my CSS class at New England Instit
 
 ---
 
-# CSS Flexbox Layout
+### CSS Flexbox Layout
 
 ![CSS Flexbox Layout](./images/flexbox.png)
