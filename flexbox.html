@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/flexbox.css">
+    <link rel="icon" href="favicon.ico">
+    <title>CSS Flexbox</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="top-links">
+          <a href="#">File</a>
+          <a href="#">Edit</a>
+          <a href="#">Help</a>
+        </div>
+        <h1 class="title">CSS Flexbox</h1>
+        <a href="#" class="settings-icon"></a>
+      </header>
+      <section>
+        <aside>
+          <a href="#" id="tray"></a>
+          <a href="#" id="square"></a>
+          <a href="" id="trash"></a>
+        </aside>
+        <nav>
+          <details>
+            <summary>Files</summary>
+            <ul id="files">
+              <li class="file">File 1</li>
+              <li class="file">File 1</li>
+              <li class="file">File 1</li>
+              <li class="file">File 1</li>
+            </ul>
+          </details>
+          <details>
+            <summary>Other Stuff</summary>
+            <ul id="stuff">
+              <li class="stuff">Stuff 1</li>
+              <li class="stuff">Stuff 2</li>
+            </ul>
+          </details>
+        </nav>
+        <div class="content">
+          <div id="tabs">
+            <a href="#" class="tabs">
+              <div class="icon"></div>
+              <span>Tab 1</span>
+              <div class="x-icon"></div>
+            </a>
+            <a href="#" class="tabs">
+              <div class="icon"></div>
+              <span>Tab 2</span>
+              <div class="x-icon"></div>
+            </a>
+            <a href="#" class="tabs">
+              <div class="icon"></div>
+              <span>Tab 3</span>
+              <div class="x-icon"></div>
+            </a>
+          </div>
+          <div class="breadcrumbs">
+            <div>
+              <a href="#">SE 136</a>
+              <span> ></span>
+              <a href="#">Week 6</a>
+              <span> ></span>
+              <a href="#">Homework</a>
+              <span> ></span>
+              <a href="#">Tab 1</a>
+            </div>
+          </div>
+          <textarea></textarea>
+        </div>
+      </section>
+      <footer>
+        <p>CSS Flexbox | AJ Saporito</p>
+        <a href="#" class="network-icon"></a>
+      </footer>
+    </main>
+    <script>
+      const tray = document.querySelector('#tray');
+      const tabs = document.querySelectorAll('#tabs a');
+
+      function openClose() {
+        const nav = document.querySelector('nav');
+        nav.classList.toggle('hidden');
+      }
+      
+      tray.addEventListener('click', openClose);
+
+      for (let i = 0; i < tabs.length; i++) {
+        tabs[i].addEventListener('click', function(e) {
+          for (let j = 0; j < tabs.length; j++) {
+            tabs[j].style.backgroundColor = '';
+          }
+
+          e.target.style.backgroundColor = '#161616';
+          document.querySelectorAll('.breadcrumbs a')[3].innerHTML = e.target.innerText;
+        });
+      } 
+    </script>
+  </body>
+</html>
